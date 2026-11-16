@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11100e">
+    <meta name="description" content="Hambúrgueres artesanais, ingredientes selecionados e pedidos pelo WhatsApp.">
+    <title>Quintal Grill — Hamburgueria Artesanal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Quintal Grill — início">
+        <img class="brand-logo" src="images/logo-site.png" alt="Quintal Grill">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#atelier">O atelier</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-primary header-order" href="#cardapio">Pedir agora <span aria-hidden="true">→</span></a>
+        <button class="cart-button" id="open-cart" type="button" aria-label="Abrir sacola com 0 itens">
+          <span aria-hidden="true">▱</span><span class="cart-count" id="cart-count" hidden>0</span>
+        </button>
+        <button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" hidden>
+        <a href="#atelier">O atelier</a><a href="#cardapio">Cardápio</a>
+        <a href="#experiencia">Experiência</a><a href="#delivery">Delivery</a><a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">Hamburgueria de fogo &amp; autor</p>
+          <h1>CARNE.<br><em>CHAPA.</em><br>ATITUDE.</h1>
+          <p class="hero-description">Cortes selecionados e um burger artesanal onde cada camada tem propósito.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#cardapio">Explorar o menu <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="#atelier">Nossa história <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="highlights">
+            <div><strong>240g</strong><span>Hambúrguer autoral</span></div>
+            <div><strong>Costela</strong><span>Costela desfiada</span></div>
+            <div><strong>4.9</strong><span>Avaliação média</span></div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=1400&amp;h=1400&amp;fit=crop&amp;auto=format" alt="Hambúrguer artesanal servido na casa">
+          <div class="hours">QUA — DOM <strong>19h / 23h</strong></div>
+          <div class="hero-caption"><span><small>ASSINATURA 01</small><strong>Ouro Negro</strong></span><span><small>A PARTIR DE</small><strong class="gold">R$ 46</strong></span></div>
+        </div>
+      </section>
+
+      <section class="manifesto section-wrap" id="atelier">
+        <div class="manifesto-image">
+          <img src="https://images.unsplash.com/photo-1516211697506-8360dbcfe9a4?w=1200&amp;h=1000&amp;fit=crop&amp;auto=format" alt="Chef preparando hambúrguer na cozinha">
+          <div class="image-note"><span aria-hidden="true">♨</span><strong>Feito à mão.<br>Finalizado na chapa.</strong></div>
+        </div>
+        <div class="manifesto-copy">
+          <p class="eyebrow">Manifesto da casa</p>
+          <h2>MENOS EXCESSO.<br><em>MAIS ORIGEM.</em></h2>
+          <p class="muted">Ingredientes escolhidos com cuidado, preparo artesanal e respeito ao sabor de cada elemento.</p>
+          <div class="values">
+            <div><strong>01</strong><span>Molho da casa</span></div><div><strong>02</strong><span>Pão de fermentação natural</span></div>
+            <div><strong>03</strong><span>Molhos autorais</span></div><div><strong>04</strong><span>Hambúrgueres artesanais</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section section-wrap" id="cardapio">
+        <div class="section-heading">
+          <div><p class="eyebrow">Seleção da casa</p><h2>O CARDÁPIO<span class="red">.</span></h2></div>
+          <p class="muted">Receitas precisas, ingredientes sazonais e sabores que permanecem.</p>
+        </div>
+        <div class="filters" id="filters" aria-label="Filtrar cardápio"></div>
+        <div class="menu-grid" id="menu-grid"></div>
+      </section>
+
+      <section class="experience" id="experiencia">
+        <div class="experience-copy">
+          <p class="eyebrow">O ritual da brasa</p><h2>COMER BEM<br>É UM <em>ATO.</em></h2>
+          <p>Da primeira mordida ao último gole, cada detalhe existe para transformar o jantar em memória.</p>
+          <a class="button button-light" href="#contato">Reservar uma mesa <span aria-hidden="true">→</span></a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=1200&amp;h=900&amp;fit=crop&amp;auto=format" alt="Hambúrguer com fritas servido à mesa">
+      </section>
+
+      <section class="delivery section-wrap" id="delivery">
+        <div>
+          <p class="eyebrow">Brasa onde você estiver</p><h2>CHEGA QUENTE.<br><em>COMO DEVE SER.</em></h2>
+          <p class="muted delivery-description">Embalagem exclusiva, montagem pensada para viagem e entrega na nossa área.</p>
+          <div class="delivery-facts">
+            <div><span aria-hidden="true">◷</span><strong>40 min a 1h</strong><small>Tempo médio</small></div>
+            <div><span aria-hidden="true">⌖</span><strong>$5 taxa de entrega</strong><small>Área de entrega</small></div>
+            <div><span aria-hidden="true">★</span><strong>4.9 / 5</strong><small>Avaliação</small></div>
+          </div>
+          <a class="button button-primary" href="#cardapio">Montar meu pedido <span aria-hidden="true">▱</span></a>
+        </div>
+        <div class="delivery-image">
+          <img src="https://images.unsplash.com/photo-1603064752734-4c48eff53d05?w=1000&amp;h=900&amp;fit=crop&amp;auto=format" alt="Hambúrguer pronto para delivery">
+          <span>✓ &nbsp; Entrega própria</span>
+        </div>
+      </section>
+
+      <section class="gallery" aria-label="Galeria de fotos">
+        <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=800&amp;h=800&amp;fit=crop&amp;auto=format" alt="Hambúrguer artesanal">
+        <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?w=800&amp;h=800&amp;fit=crop&amp;auto=format" alt="Detalhes da casa">
+        <img src="https://images.unsplash.com/photo-1534790566855-4cb788d389ec?w=800&amp;h=800&amp;fit=crop&amp;auto=format" alt="Prato servido na casa">
+        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=800&amp;h=800&amp;fit=crop&amp;auto=format" alt="Hambúrguer com acompanhamentos">
+      </section>
+
+      <section class="contact section-wrap" id="contato">
+        <div class="contact-image">
+          <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=1000&amp;h=1100&amp;fit=crop&amp;auto=format" alt="Interior do Quintal Grill">
+          <div><span class="eyebrow">Pacaembu · SP</span><strong>Av. Ver. José Gomes Duda, 1572 — Centro</strong></div>
+        </div>
+        <div class="contact-copy">
+          <p class="eyebrow">Reserve sua experiência</p><h2>SUA MESA,<br>À BRASA.</h2>
+          <p class="muted">Preencha os dados e envie sua solicitação de reserva diretamente pelo WhatsApp.</p>
+          <form id="reservation-form">
+            <input name="name" required autocomplete="name" placeholder="SEU NOME" aria-label="Seu nome">
+            <input name="phone" required type="tel" autocomplete="tel" placeholder="TELEFONE" aria-label="Telefone">
+            <input name="date" required type="date" aria-label="Data da reserva">
+            <select name="guests" aria-label="Quantidade de pessoas"><option>2 pessoas</option><option>3 pessoas</option><option>4 pessoas</option><option>5+ pessoas</option></select>
+            <button class="button button-primary" type="submit">Solicitar reserva <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div><a class="brand" href="#inicio" aria-label="Quintal Grill — início"><img class="brand-logo" src="images/logo-site.png" alt="Quintal Grill"></a><p class="muted">Hambúrgueres de autor, ingredientes honestos e fogo como assinatura.</p></div>
+        <div><p class="eyebrow">Visite</p><p class="muted">Av. Ver. José Gomes Duda, 1572 — Pacaembu, SP<br>Quarta a domingo, a partir das 18h30.</p></div>
+        <div><p class="eyebrow">Fale com a casa</p><a class="footer-link" href="tel:+5518997844443">(18) 99784-4443</a><a class="footer-link" href="https://instagram.com/quintal_grill_" target="_blank" rel="noreferrer">@quintal_grill_ no Instagram</a></div>
+      </div>
+      <div class="copyright"><span>© 2026 Quintal Grill</span><span>Feito com fogo em Pacaembu</span></div>
+    </footer>
+
+    <div class="cart-backdrop" id="cart-backdrop" hidden>
+      <button class="backdrop-dismiss" id="close-cart-backdrop" type="button" aria-label="Fechar sacola"></button>
+      <aside class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <div class="cart-heading"><div><p class="eyebrow">Seu pedido</p><h2 id="cart-title">Sacola</h2></div><button id="close-cart" type="button" aria-label="Fechar sacola">×</button></div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer" id="cart-footer" hidden></div>
+      </aside>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
